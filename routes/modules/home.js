@@ -8,7 +8,7 @@ const RestaurantListModels = require("../../models/restaurant")
 // 定義首頁路由
 router.get("/", (req, res) => {
   const keyword = req.query.keyword || ''
-  const sort = req.query.sort || ''
+  const sort = req.query.sort || 'name'
   RestaurantListModels.find(
     {
       $or: [
